@@ -4,7 +4,7 @@ node{
 }
     stage('Compile-Package'){
 
-         def mvnHome = tool name: 'maven', type: 'maven' https://github.com/jayanth322/myapp.git
+         def mvnHome = tool name: 'maven_home', type: 'maven' 
          sh "${mvnHome}/bin/mvn package"
 	 sh 'cp target/*.war /opt/k8s-lab/myweb-0.0.5.war'
   } 
